@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Muhammed Ashfaque P | Java Backend Developer</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Fira+Code:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="#" class="logo">Ashfaque<span>Dev</span></a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact" class="btn-nav">Contact</a></li>
+      </ul>
+      <button class="menu-toggle"><i class="fas fa-bars"></i></button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1 class="hero-title">Java Backend Developer</h1>
+        <h2 class="hero-name">Muhammed Ashfaque P</h2>
+        <p class="hero-subtitle">Crafting scalable backend solutions with <span class="highlight">Java</span>, <span class="highlight">Spring Boot</span>, <span class="highlight">REST APIs</span>, and modern development practices</p>
+        <div class="hero-btns">
+          <a href="#projects" class="btn-primary">View Projects</a>
+          <a href="#contact" class="btn-secondary">Get In Touch</a>
+        </div>
+        <div class="hero-info">
+          <p><i class="fas fa-map-marker-alt"></i> Kozhikode, India</p>
+          <p><i class="fas fa-graduation-cap"></i> B.Tech CSE '25 Graduate</p>
+          <p><i class="fas fa-clock"></i> Immediate Joiner</p>
+        </div>
+      </div>
+      <div class="hero-image">
+        <div class="code-snippet">
+          <pre><code>@RestController
+@RequestMapping("/api")
+public class ProjectController {
+  
+  @GetMapping("/projects")
+  public List<Project> getProjects() {
+    return projectService.getAll();
+  }
+  
+  @PostMapping("/contact")
+  public ResponseEntity<?> sendMessage(
+      @RequestBody ContactRequest request) {
+    // Your message received
+    return ResponseEntity.ok("Message sent!");
+  }
+}</code></pre>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <div class="about-content">
+        <div class="about-text">
+          <p>Passionate <strong>Java Backend Developer</strong> with 6 months of hands-on experience building production-ready applications. I specialize in creating secure, scalable backend systems using <strong>Spring Boot, Hibernate/JPA, and REST APIs</strong>.</p>
+          <p>Recently completed intensive training at <strong>Soften Technologies</strong>, where I developed multiple real-world projects from scratch. I follow clean code practices, layered architecture, and agile methodologies.</p>
+          <p>Currently seeking <strong>Java Developer roles</strong> where I can contribute to meaningful projects and grow with a talented team.</p>
+          <div class="about-links">
+            <a href="https://github.com/MhdAshfaqueP" target="_blank" class="social-link"><i class="fab fa-github"></i> GitHub</a>
+            <a href="https://linkedin.com/in/mhd-ashfaque-p" target="_blank" class="social-link"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            <a href="mailto:mhdashfaquep@gmail.com" class="social-link"><i class="fas fa-envelope"></i> Email</a>
+          </div>
+        </div>
+        <div class="about-stats">
+          <div class="stat-card">
+            <h3>15+</h3>
+            <p>Projects Built</p>
+          </div>
+          <div class="stat-card">
+            <h3>6</h3>
+            <p>Months Training</p>
+          </div>
+          <div class="stat-card">
+            <h3>Immediate</h3>
+            <p>Joining</p>
+          </div>
+          <div class="stat-card">
+             <h3>Clean</h3>
+    <p>Code Advocate</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="section bg-light">
+    <div class="container">
+      <h2 class="section-title">Technical Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h3><i class="fas fa-server"></i> Backend</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Java</span>
+            <span class="skill-tag">Spring Boot</span>
+            <span class="skill-tag">Spring MVC</span>
+            <span class="skill-tag">REST APIs</span>
+            <span class="skill-tag">JWT Authentication</span>
+            <span class="skill-tag">Hibernate/JPA</span>
+            <span class="skill-tag">JDBC</span>
+            <span class="skill-tag">Servlets</span>
+            <span class="skill-tag">Quarkus</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3><i class="fas fa-database"></i> Database</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">MySQL</span>
+            <span class="skill-tag">PostgreSQL</span>
+            <span class="skill-tag">SQL</span>
+            <span class="skill-tag">Database Design</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3><i class="fas fa-code"></i> Frontend</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">HTML5</span>
+            <span class="skill-tag">CSS3</span>
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">React Basics</span>
+            <span class="skill-tag">Thymeleaf</span>
+            <span class="skill-tag">JSP</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3><i class="fas fa-tools"></i> Tools & Concepts</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Git</span>
+            <span class="skill-tag">Maven</span>
+            <span class="skill-tag">Apache Tomcat</span>
+            <span class="skill-tag">Postman</span>
+            <span class="skill-tag">IntelliJ IDEA</span>
+            <span class="skill-tag">OOP</span>
+            <span class="skill-tag">Data Structures</span>
+            <span class="skill-tag">Microservices</span>
+            <span class="skill-tag">Agile/Scrum</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="section">
+    <div class="container">
+      <h2 class="section-title">Featured Projects</h2>
+      <div class="projects-grid">
+        <!-- Project 1 -->
+        <div class="project-card">
+          <div class="project-header">
+            <h3>Job Application Management System</h3>
+            <span class="project-status">Full Stack</span>
+          </div>
+          <p class="project-desc">Complete job portal with admin/user roles, resume upload, and application tracking.</p>
+          <div class="project-tech">
+            <span>Spring Boot</span>
+            <span>Thymeleaf</span>
+            <span>MySQL</span>
+            <span>JWT</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/MhdAshfaqueP/azutech-job-portal" class="project-link"><i class="fab fa-github"></i> Code</a>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card">
+          <div class="project-header">
+            <h3>Personal Expense Tracker API</h3>
+            <span class="project-status">Backend API</span>
+          </div>
+          <p class="project-desc">Secure REST API for expense management with user authentication and analytics.</p>
+          <div class="project-tech">
+            <span>Spring Boot</span>
+            <span>JWT</span>
+            <span>MySQL</span>
+            <span>REST</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/MhdAshfaqueP/Personal-Expense-Tracker-" class="project-link"><i class="fab fa-github"></i> Code</a>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+<div class="project-card">
+  <div class="project-header">
+    <h3>User Management System</h3>
+    <span class="project-status">Full Stack Web App</span>
+  </div>
+  <p class="project-desc">CRUD-based user management system with form handling, validations, and role-based operations following MVC architecture.</p>
+  <div class="project-tech">
+    <span>Spring Boot</span>
+    <span>Spring MVC</span>
+    <span>Hibernate</span>
+    <span>Thymeleaf</span>
+    <span>MySQL</span>
+  </div>
+  <div class="project-links">
+    <a href="https://github.com/MhdAshfaqueP/User-Management-System-Spring-Boot-Project" class="project-link"><i class="fab fa-github"></i> Code</a>
+  </div>
+</div>
+
+        <!-- Project 4 -->
+        <div class="project-card">
+          <div class="project-header">
+            <h3>Hospital Appointment System</h3>
+            <span class="project-status">Web Application</span>
+          </div>
+          <p class="project-desc">Appointment booking system for patients and doctors with admin scheduling.</p>
+          <div class="project-tech">
+            <span>JSP</span>
+            <span>Servlets</span>
+            <span>JDBC</span>
+            <span>MySQL</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/MhdAshfaqueP/Hospital-Management-System " class="project-link"><i class="fab fa-github"></i> Code</a>
+            </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience" class="section bg-light">
+    <div class="container">
+      <h2 class="section-title">Experience & Education</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-date">Jul 2025 - Jan 2026  </div>
+          <div class="timeline-content">
+            <h3>Java Full Stack Developer - Trainee</h3>
+            <h4>Soften Technologies, Kochi</h4>
+            <ul>
+              <li>Built Java backend applications using Spring Boot and Hibernate</li>
+              <li>Implemented REST APIs with authentication and validation</li>
+              <li>Worked with MySQL following layered architecture</li>
+              <li>Used Git for version control in Agile environment</li>
+            </ul>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-date">2021 - 2025  </div>
+          <div class="timeline-content">
+            <h3>B.Tech Computer Science & Engineering</h3>
+            <h4>KMCT College of Engineering, Kozhikode</h4>
+            <p>CGPA: 7.0/10</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- Contact Section -->
+<section id="contact" class="section">
+  <div class="container">
+    <h2 class="section-title">Get In Touch</h2>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h3>Ready to start a project?</h3>
+        <p>I'm currently available for <strong>Java Developer roles</strong> and can join immediately.</p>
+        <div class="contact-details">
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <div>
+              <h4>Email</h4>
+              <a href="mailto:mhdashfaquep@gmail.com">mhdashfaquep@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-phone"></i>
+            <div>
+              <h4>Phone</h4>
+              <a href="tel:+919400643947">+91 9400643947</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <div>
+              <h4>Location</h4>
+              <p>Kozhikode, Kerala, India</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-file-pdf"></i>
+            <div>
+              <h4>Resume</h4>
+              <a href="resume.pdf" download="Muhammed_Ashfaque_Resume.pdf">Download PDF</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="contact-actions">
+        <a href="mailto:mhdashfaquep@gmail.com" class="btn-primary btn-large"><i class="fas fa-paper-plane"></i> Send Email</a>
+        <a href="resume.pdf" download="Muhammed_Ashfaque_Resume.pdf" class="btn-primary btn-large"><i class="fas fa-file-download"></i> Download Resume</a>
+        <div class="social-icons">
+          <a href="https://github.com/MhdAshfaqueP" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://linkedin.com/in/mhd-ashfaque-p" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="resume.pdf" target="_blank" class="resume-preview" title="Preview Resume"><i class="fas fa-eye"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 Muhammed Ashfaque P | Java Backend Developer</p>
+      <p>Portfolio built with HTML, CSS & JavaScript</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
