@@ -4,18 +4,14 @@ const navLinks = document.querySelector('.nav-links');
 
 if (menuToggle) {
   menuToggle.addEventListener('click', () => {
-    navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
-    if (navLinks.style.display === 'flex') {
-      navLinks.style.flexDirection = 'column';
-      navLinks.style.position = 'absolute';
-      navLinks.style.top = '100%';
-      navLinks.style.left = '0';
-      navLinks.style.right = '0';
-      navLinks.style.background = 'white';
-      navLinks.style.padding = '2rem';
-      navLinks.style.boxShadow = '0 10px 20px rgba(0,0,0,0.1)';
-      navLinks.style.gap = '1.5rem';
-    }
+    navLinks.classList.toggle('active');
+    
+    // Close menu when clicking a link
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+      });
+    });
   });
 }
 
@@ -28,15 +24,18 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     
     const targetElement = document.querySelector(targetId);
     if (targetElement) {
+      // Adjust for mobile header height
+      const headerOffset = window.innerWidth <= 768 ? 70 : 80;
+      const elementPosition = targetElement.offsetTop;
+      const offsetPosition = elementPosition - headerOffset;
+      
       window.scrollTo({
-        top: targetElement.offsetTop - 80,
+        top: offsetPosition,
         behavior: 'smooth'
       });
       
       // Close mobile menu if open
-      if (window.innerWidth <= 768) {
-        navLinks.style.display = 'none';
-      }
+      navLinks.classList.remove('active');
     }
   });
 });
@@ -57,7 +56,8 @@ window.addEventListener('scroll', () => {
 
 // Project card animation on scroll
 const observerOptions = {
-  threshold: 0.1
+  threshold: 0.1,
+  rootMargin: '0px 0px -50px 0px'
 };
 
 const observer = new IntersectionObserver((entries) => {
@@ -79,11 +79,18 @@ document.querySelectorAll('.project-card').forEach(card => {
 
 // Add current year to footer
 document.addEventListener('DOMContentLoaded', () => {
-  const yearSpan = document.querySelector('footer p');
-  if (yearSpan) {
+  const footerText = document.querySelector('.footer p');
+  if (footerText) {
     const currentYear = new Date().getFullYear();
-    yearSpan.innerHTML = yearSpan.innerHTML.replace('2026', currentYear);
+    footerText.innerHTML = footerText.innerHTML.replace('2026', currentYear);
   }
+  
+  // Close mobile menu when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!menuToggle.contains(e.target) && !navLinks.contains(e.target) && navLinks.classList.contains('active')) {
+      navLinks.classList.remove('active');
+    }
+  });
   
   console.log('Portfolio loaded successfully!');
 });
